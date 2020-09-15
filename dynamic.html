@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Characteristics</title>
+  <link rel="stylesheet" href="dynamic.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+</head>
+
+<body>
+  <div class="all">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="left">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <h4 class="level1">Level 2 </h4>
+              <h4 class="charecter">Dynamic Characteristics</h4>
+              <img class="image" src="dynamic.jpg">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div>
+                <h4 class="control">Control Panel</h4>
+                <form id="myForm">
+
+                  <input type="checkbox" id="bare">
+                  <label for="bare"><strong>Bare</strong></label><br>
+                  <label for="barematerial">Material:</label>
+                  <select id="barematerial" name="barematerial" onchange="change11()">
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">Platinum</option>
+                    <option value="1">Copper</option>
+                    <option value="2">Nickel</option>
+                    <option value="3">Silver</option>
+                  </select>
+                  <h6 id="baretimeconstant"></h6>
+
+                  <br>
+                  <input type="checkbox" id="withseath">
+                  <label for="withseath"><strong>Withsheath</strong></label><br>
+                  <label for="withseathmaterial">Material:</label>
+                  <select id="withseathmaterial" name="withseathmaterial" >
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">SS 304</option>
+                    <option value="1">SS 316</option>
+                    <option value="2">SS 410</option>
+                  </select>
+                  <label for="withseaththickness">Thickness:</label>
+                  <select id="withseaththickness" name="withseaththickness" onchange="change12()">
+                    <option id="selected" selected>Select Thickness</option>
+                    <option value="0">0.5mm</option>
+                    <option value="1">0.75mm</option>
+                    <option value="2">1.0mm</option>
+                    <option value="3">1.5mm</option>
+                  </select>
+                  <h6 id="withseathtimeconstant"></h6>
+                  <br>
+                  <input type="checkbox" id="thermowell">
+                  <label for="thermowell"><strong>Thermowell</strong></label><br>
+                  <label for="thermowellmaterial">Material:</label>
+                  <select id="thermowellmaterial" name="thermowellmaterial" >
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">SS 304</option>
+                    <option value="1">SS 316</option>
+                    <option value="2">SS 410</option>
+                  </select>
+                  <label for="thermowellthickness">Thickness:</label>
+                  <select id="thermowellthickness" name="thermowellthickness" >
+                    <option id="selected" selected>Select Thickness</option>
+                    <option value="0">0.5mm</option>
+                    <option value="1">1.0mm</option>
+                    <option value="2">1.5mm</option>
+                    <option value="3">2.0mm</option>
+                  </select>
+                  <label for="thermowellfilling">Filling Material:</label>
+                  <select id="thermowellfilling" name="thermowellfilling" onchange="change13()">
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">MgO Powder</option>
+                    <option value="1">Silicon Compound</option>
+                  </select>
+                  <h6 id="thermowelltimeconstant"></h6>
+                  <br>
+                  <div class="button">
+                    <button type="button" class="btn btn-dark" id="resett" onclick="reset()">Reset</button>
+
+                    <button type="button" class="btn btn-success" id="find" value="button"
+                      onclick="response()">Submit</button><br>
+                    <button type="button" class="btn btn-danger" id="graph">Graph</button>
+
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="right">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <h4 class="level1">Level 2 </h4>
+              <h4 class="charecter">Dynamic Characteristics</h4>
+              <img class="image" src="dynamic2.jpg">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div>
+                <h4 class="control">Control Panel</h4>
+                <form id="myForm">
+
+                  <input type="checkbox" id="bare2">
+                  <label for="bare2"><strong>Bare</strong></label><br>
+                  <label for="barematerial2">Thermocouple Type:</label>
+                  <select id="barematerial2" name="barematerial2" onchange="change21()">
+                    <option value="Selected">Select Type</option>
+                    <option value="0">J</option>
+                    <option value="1">K</option>
+                    <option value="2">R</option>
+                    <option value="3">S</option>
+                    <option value="4">T</option>
+                  </select><br>
+                  
+                  <h6 id="baretimeconstant2"></h6>
+
+                  <br>
+                  <input type="checkbox" id="withseath2">
+                  <label for="withseath2"><strong>Withsheath</strong></label><br>
+                  <label for="withseathmaterial2">Material:</label>
+                  <select id="withseathmaterial2" name="withseathmaterial2" >
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">SS 304</option>
+                    <option value="1">SS 316</option>
+                    <option value="2">SS 410</option>
+                  </select>
+                  <label for="withseaththickness2">Thickness:</label>
+                  <select id="withseaththickness2" name="withseaththickness2" onchange="change22()">
+                    <option id="selected" selected>Select Thickness</option>
+                    <option value="0">0.5mm</option>
+                    <option value="1">0.75mm</option>
+                    <option value="2">1.0mm</option>
+                    <option value="3">1.5mm</option>
+                  </select>
+                  <h6 id="withseathtimeconstant2"></h6>
+                  <br>
+                  <input type="checkbox" id="thermowell2">
+                  <label for="thermowell2"><strong>Thermowell</strong></label><br>
+                  <label for="thermowellmaterial2">Material:</label>
+                  <select id="thermowellmaterial2" name="thermowellmaterial2" >
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">SS 304</option>
+                    <option value="1">SS 316</option>
+                    <option value="2">SS 410</option>
+                  </select>
+                  <label for="thermowellthickness2">Thickness:</label>
+                  <select id="thermowellthickness2" name="thermowellthickness2" >
+                    <option id="selected" selected>Select Thickness</option>
+                    <option value="0">0.5mm</option>
+                    <option value="1">1.0mm</option>
+                    <option value="2">1.5mm</option>
+                    <option value="3">2.0mm</option>
+                  </select>
+                  <label for="thermowellfilling2">Filling Material:</label>
+                  <select id="thermowellfilling2" name="thermowellfilling2" onchange="change23()">
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">MgO Powder</option>
+                    <option value="1">Silicon Compound</option>
+                  </select>
+                  <h6 id="thermowelltimeconstant2"></h6>
+                  <br>
+                  <div class="button">
+                    <button type="button" class="btn btn-dark" id="resett" onclick="reset()">Reset</button>
+
+                    <button type="button" class="btn btn-success" id="find" value="button"
+                      onclick="response()">Submit</button><br>
+                    <button type="button" class="btn btn-danger" id="graph">Graph</button>
+
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <script type="text/javascript" src="dynamic.js"></script>
+  <script type="text/javascript" src="chart.js"></script>
+
+</body>
+
+</html>

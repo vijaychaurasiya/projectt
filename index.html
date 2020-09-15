@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Characteristics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+</head>
+
+<body>
+  <div class="all">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="left">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <h4 class="level1">Level 1 </h4>
+              <h4 class="charecter">Static Characteristics</h4>
+              <img class="image" src="static.jpg">
+              <a class="anchor" href="dynamic.html"><button class="btn btn-primary" type="submit" id="level2">Level 2</button></a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div>
+                <h4 class="control">Control Panel</h4>
+                <form id="myForm">
+                  <label for="material">Material:</label>
+                  <select id="material" name="material" onchange="change()">
+                    <option id="selected" selected>Select Material</option>
+                    <option value="0">Platinum</option>
+                    <option value="1">Copper</option>
+                    <option value="2">Nickel</option>
+                    <option value="3">Silver</option>
+                  </select>
+                  <h6 id="alphavalue"></h6>
+                  <h6 id="temp"></h6>
+                  <br>
+                  <div class="rat0">
+                    <label>R<sub>0</sub> :</label>
+                    <input id="ratzero" type="number" placeholder="Input" min="0" max="1800">
+                  </div>
+                  <br>
+                  <div class="temperature">
+                    <label>Temp.(&#8451;) :</label>
+                    <input id="inputtemp" type="number" placeholder="Input" min="-200">
+                  </div>
+                  <br>
+                  <div class="button">
+                    <button type="button" class="btn btn-dark" id="resett" onclick="reset()">Reset</button>
+                    <button type="button" class="btn btn-danger" id="graph" onclick="plot()">Graph</button>
+                    <button type="button" class="btn btn-success" id="find" value="button" onclick="response()">Find
+                      R<sub>t</sub></button>
+                  </div>
+                  <br>
+                  <div class="ratT">
+                    <lebel>R<sub>t</sub> :</lebel>
+                    <input id="rt" value="">
+                  </div>
+                  
+                </form>
+                <div>
+                  <h5><u>Selected Values</u></h5>
+                  <div id="div1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <canvas id="myChart" width="80" height="45"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="right">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <h4 class="level1">Level 1 </h4>
+              <h4 class="charecter">Static Characteristics</h4>
+              <img class="image" src="static2.jpg">
+              <a class="anchor" href="dynamic.html"><button class="btn btn-primary" type="submit" id="level2">Level 2</button></a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div>
+                <h4 class="control">Control Panel</h4>
+                <form id="myForm">
+                  <label for="material">Thermocouple type:</label>
+                  <select id="material2" name="material" onchange="change2()">
+                    <option id="selected" selected>Select Type</option>
+                    <option value="0">J</option>
+                    <option value="1">K</option>
+                    <option value="2">R</option>
+                    <option value="3">S</option>
+                    <option value="4">T</option>
+                  </select>
+                  <h3></h3>
+                  <h6 id="alphavalue2"></h6>
+
+                  <br>
+                  <div class="rat0">
+                    <label>Reference Temp :</label>
+                    <input id="ratzero2" type="number" placeholder="Input" min="0" max="1800">
+                  </div>
+                  <br>
+                  <div class="temperature2">
+                    <label>Temp.(&#8451;) :</label>
+                    <input id="inputtemp2" type="number" placeholder="Input" min="-200">
+                  </div>
+                  <br>
+                  <div class="ratT2">
+                    <lebel>Enter Input Value mV :</lebel>
+                    <input id="rt2" placeholder="Input" value="">
+                  </div>
+                  <div class="button">
+                    <button type="button" class="btn btn-dark" id="resett" onclick="reset()">Reset</button>
+                    <button type="button" class="btn btn-danger" id="graph" onclick="plot2()" >Graph</button>
+                    <button type="button" class="btn btn-success" id="find" value="button" onclick="response2()">Find
+                      R<sub>t</sub></button>
+                  </div>
+
+                </form>
+                <div>
+                  <h5><u>Selected Values</u></h5>
+                  <div id="div2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <canvas id="myChart2" width="80" height="45"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="chart.js"></script>
+
+</body>
+
+</html>

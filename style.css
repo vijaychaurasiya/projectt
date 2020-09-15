@@ -1,0 +1,168 @@
+.level1{
+    margin-top: 20px;
+    text-decoration: underline;
+    
+}
+
+h4,h5{
+    text-align: center;
+}
+
+.charecter{
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.all{
+    margin: 30px 3%;
+}
+
+#level{
+    
+   margin-top: 40px;
+   margin-left: 33.3%;
+}
+#level2{
+    
+    margin-top: 40px;
+    margin-left: 33.3%;
+ }
+
+.anchor{
+    color: #ffffff;
+}
+
+.control{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+
+
+.left{
+background-color: #cecaca;
+padding: 20px;
+border-radius: 20px;
+box-shadow: 10px 10px 8px #494949;
+margin: 10px;
+}
+
+.right{
+    background-color: #cecaca;
+    padding: 20px;
+    border-radius: 20px;
+box-shadow: 10px 10px 8px #474747;
+margin: 10px;
+
+    }
+
+
+.image{
+    margin-top: 10px;
+    border-radius: 5px;
+   
+    
+}
+#graph{
+margin-left: inherit auto;
+}
+
+input{
+  float: right;
+  text-align: center;
+}
+
+#material{
+    width: 60%;
+    align-content: right;
+    float: right;
+    height: 30px;
+    padding-left: 10%;
+    
+}
+
+#material2{
+    width: 60%;
+    align-content: right;
+    float: right;
+    height: 30px;
+    padding-left: 10%;
+    
+}
+
+
+.rat0{
+    margin-bottom: 5px;
+}
+
+#ratzero{
+width: 60% ;
+}
+
+#ratzero2{
+    width: 60% ;
+    }
+
+.temperature{
+margin-top: 20px;
+margin-bottom: 25px;
+}
+
+.temperature2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    }
+
+#inputtemp{
+    width:60%
+}
+
+#inputtemp2{
+    width:60%
+}
+
+button{
+    border-radius: 10px;
+    background-color: rgb(144, 144, 241);
+}
+
+#find{
+float: right;
+}
+
+.ratT{
+    
+    margin-bottom: 30px;
+}
+
+.ratT2{
+    
+    margin-bottom: 70px;
+}
+#div1{
+    border:1px solid #888888;
+    border-radius: 5px;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+#div2{
+    border:1px solid #888888;
+    border-radius: 5px;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.button{
+    margin-bottom: 30px;
+}
+
+#rt{
+    width:60%;
+}
+
+#rt2{
+    width:60%;
+}
